@@ -21,14 +21,25 @@ const About = () => {
         >
           About North Star
         </motion.h1>
-        <motion.p 
+        <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
-          style={{ fontSize: '1.2rem', color: 'var(--text-secondary)', maxWidth: '800px', lineHeight: 1.8, marginBottom: '4rem' }}
+          style={{ color: 'var(--text-secondary)', maxWidth: '900px', lineHeight: 1.8, marginBottom: '4rem' }}
         >
-          Established in 2005, North Star Lifts & Escalators Pvt. Ltd. is a premier manufacturer and installer of vertical mobility solutions in India. Through our indigenous manufacturing facility, we control the entire lifecycle of our elevators - guaranteeing rapid installation, rigorous safety testing, and proactive maintenance.
-        </motion.p>
+          <p style={{ fontSize: '1.2rem', marginBottom: '1.5rem' }}>
+            It all began in <strong>2006</strong> with a simple yet powerful vision: to redefine vertical mobility in India by engineering elevators that don't just move people, but move them with uncompromising safety, reliability, and grace. What started as a small team of passionate engineers has now blossomed into North Star Lifts & Escalators Pvt. Ltd., a premier manufacturer trusted by industry leaders across the nation.
+          </p>
+          <p style={{ fontSize: '1.1rem', marginBottom: '1.5rem' }}>
+            In our early days, we recognized a critical gap in the market. Many property developers and homeowners were struggling with delayed installations, opaque pricing, and foreign parts that took months to replace. We knew there had to be a better way—an indigenous, end-to-end approach that puts the customer first.
+          </p>
+          <p style={{ fontSize: '1.1rem', marginBottom: '1.5rem' }}>
+            Today, operating from our state-of-the-art manufacturing facility, we control the entire lifecycle of our elevators. From the first structural blueprint to precision manufacturing, rigorous multi-point safety testing, and proactive 24/7 maintenance, we leave absolutely nothing to chance. We don't just assemble parts; we craft engineering solutions.
+          </p>
+          <p style={{ fontSize: '1.15rem', color: 'var(--text-primary)', fontWeight: 600 }}>
+            Every lift we install is a promise of quality, standing as the true North Star of the vertical transport industry.
+          </p>
+        </motion.div>
       </div>
       <Certifications />
     </main>

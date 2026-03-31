@@ -16,7 +16,7 @@ const AboutOverview = () => {
             COMPANY OVERVIEW
           </div>
           <h2 style={{ fontSize: 'clamp(2.5rem, 4vw, 3.5rem)', color: 'var(--text-primary)', marginBottom: '1.5rem', maxWidth: '800px' }}>
-            Building the Backbone of Vertical Mobility Since 2005.
+            Building the Backbone of Vertical Mobility Since 2006.
           </h2>
           <p style={{ fontSize: '1.15rem', color: 'var(--text-secondary)', maxWidth: '700px', lineHeight: 1.7 }}>
             North Star Lifts stands at the forefront of elevator engineering. We design, manufacture, and install premium vertical transportation systems perfectly tailored to industrial, commercial, and residential architectures.
