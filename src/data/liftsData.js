@@ -273,6 +273,106 @@ const liftsData = {
     ],
     applications: ['Shopping Malls', 'Luxury Hotels', 'Corporate Atriums', 'Airports', 'Landmark Buildings'],
   },
+
+  'installation': {
+    title: 'New Installations',
+    videoId: 'rKp4pe92ljg',
+    gallery: [projOffice, projMall, projHospital, projVilla],
+    tagline: 'Precision engineering from blueprint to handover.',
+    heroImg: passengerImg,
+    summary: 'Our installation process is defined by strict adherence to safety codes, exact mechanical alignment, and seamless project management to deliver elevators that operate flawlessly for decades.',
+    features: [
+      { icon: 'Ruler', title: 'Site Assessment', desc: 'Detailed shaft measurement and civil work verification before manufacturing begins.' },
+      { icon: 'ShieldCheck', title: 'Code Compliance', desc: 'Full adherence to Indian Standards (IS), NBC 2016, and EN 81 safety regulations.' },
+      { icon: 'Users', title: 'Certified Engineers', desc: 'Installation executed exclusively by North Star certified, factory-trained technicians.' },
+      { icon: 'Clock', title: 'On-Time Delivery', desc: 'Rigid project timelines to ensure handover aligns precisely with your building schedule.' },
+      { icon: 'Activity', title: 'Laser Alignment', desc: 'Laser-guided precision for guide rail alignment ensuring a vibration-free ride.' },
+      { icon: 'CheckCircle', title: 'Multi-Point QA', desc: 'Comprehensive 50-point safety and performance test before final handover.' }
+    ],
+    specs: [
+      { param: 'Standard Timeline', value: '4 to 8 weeks depending on complexity' },
+      { param: 'Civil Requirement', value: 'Plumb shaft with proper scaffolding' },
+      { param: 'Power Requirement', value: 'Temporary 3-Phase power for hoist' },
+      { param: 'Testing Procedures', value: 'Dynamic load testing, safety gear drop test' },
+      { param: 'Handover Package', value: 'O&M manuals, wiring diagrams, warranty certificates' }
+    ],
+    applications: ['Under-Construction Buildings', 'High-Rise Towers', 'Commercial Complexes', 'Private Villas'],
+  },
+
+  'maintenance': {
+    title: 'Comprehensive Maintenance',
+    videoId: 'rKp4pe92ljg',
+    gallery: [projOffice, projMall],
+    tagline: 'Proactive care to guarantee zero-downtime performance.',
+    heroImg: passengerImg,
+    summary: 'Our Annual Maintenance Contracts (AMC) go beyond mere troubleshooting. We focus on preventive care, regular lubrication, and proactive parts replacement to maximize your elevator\'s lifespan.',
+    features: [
+      { icon: 'Tool', title: 'Preventive Care', desc: 'Monthly scheduled visits to inspect, clean, and lubricate mechanical and electrical components.' },
+      { icon: 'Clock', title: '24/7 Support', desc: 'Round-the-clock emergency response teams available for rapid breakdown resolution.' },
+      { icon: 'ShieldAlert', title: 'Safety Audits', desc: 'Bi-annual comprehensive safety testing of brakes, governors, and ARD systems.' },
+      { icon: 'Settings', title: 'Genuine Parts', desc: 'Guaranteed use of OEM (Original Equipment Manufacturer) parts for all replacements.' },
+      { icon: 'FileText', title: 'Transparent Reporting', desc: 'Detailed digital inspection reports provided after every service visit.' },
+      { icon: 'Wifi', title: 'Predictive Analytics', desc: 'Optional IoT integration to predict failures before they cause downtime.' }
+    ],
+    specs: [
+      { param: 'Contract Types', value: 'Comprehensive AMC / Non-Comprehensive AMC' },
+      { param: 'Response Time', value: 'Under 2 hours for emergencies (Metro areas)' },
+      { param: 'Covered Components', value: 'Controller, motor, ropes, door drives, sensors' },
+      { param: 'Routine Frequency', value: 'Monthly or Bi-monthly based on usage' },
+      { param: 'Support Channels', value: 'Dedicated hotline, WhatsApp, and Email' }
+    ],
+    applications: ['Residential Societies', 'Corporate Offices', 'Hospitals', 'Hotels'],
+  },
+
+  'repair-overhaul': {
+    title: 'Repair & Overhaul',
+    videoId: 'rKp4pe92ljg',
+    gallery: [freightImg, projHospital],
+    tagline: 'Rapid diagnostics and restorative engineering.',
+    heroImg: freightImg,
+    summary: 'When critical components fail or performance degrades, our overhaul team steps in. We expertly diagnose complex electro-mechanical issues and execute major repairs with minimal operational disruption.',
+    features: [
+      { icon: 'Activity', title: 'Deep Diagnostics', desc: 'Advanced vibration and electrical analysis to identify the root cause of systemic issues.' },
+      { icon: 'Cog', title: 'Mechanical Overhauls', desc: 'Machine bearing replacement, sheave re-grooving, and gear oil flushing.' },
+      { icon: 'Zap', title: 'Drive & Controller Repair', desc: 'Component-level repair of variable-frequency drives and microprocessor boards.' },
+      { icon: 'Link', title: 'Rope Replacement', desc: 'Complete hoisting rope and compensation chain replacement using high-tensile steel.' },
+      { icon: 'DoorOpen', title: 'Door Mechanism Fixes', desc: 'Alignment and replacement of rollers, headers, and highly-cycled door operators.' },
+      { icon: 'Clock', title: 'Minimal Disruption', desc: 'High-impact repairs scheduled during off-peak hours to minimize tenant inconvenience.' }
+    ],
+    specs: [
+      { param: 'Typical Scope', value: 'Motor rewinding, sheave replacement, rope replacement' },
+      { param: 'Brands Serviced', value: 'North Star and all major third-party OEM brands' },
+      { param: 'Downtime Estimate', value: '1 to 5 days depending on component lead times' },
+      { param: 'Warranty', value: '6 to 12 months on all overhauled components' },
+      { param: 'Safety Checks', value: 'Full load testing required after major mechanical repairs' }
+    ],
+    applications: ['Aging Buildings', 'High-Traffic Public Facilities', 'Industrial Plants'],
+  },
+
+  'modernization': {
+    title: 'System Modernization',
+    videoId: 'rKp4pe92ljg',
+    gallery: [capsuleImg, passengerImg, projOffice],
+    tagline: 'Breathe new life into aging vertical transport systems.',
+    heroImg: capsuleImg,
+    summary: 'Elevator modernization provides the benefits of a brand-new lift at a fraction of the cost. Upgrade your outdated relay logic controllers, aging aesthetics, and inefficient motors while retaining the existing structural framework.',
+    features: [
+      { icon: 'Cpu', title: 'Controller Upgrades', desc: 'Replace obsolete relay panels with smart, energy-efficient microprocessor controllers.' },
+      { icon: 'Leaf', title: 'Energy Efficiency', desc: 'Install VVVF drives to reduce power consumption by up to 40% and ensure smoother rides.' },
+      { icon: 'Palette', title: 'Cabin Makeovers', desc: 'Redesign interiors with modern steel finishes, LED lighting, and touch-sensitive COP panels.' },
+      { icon: 'ShieldCheck', title: 'Safety Compliance', desc: 'Bring decades-old elevators up to current safety codes with modern infra-red door curtains and ARDs.' },
+      { icon: 'TrendingUp', title: 'Enhanced Performance', desc: 'Reduce waiting times and improve leveling accuracy with advanced group dispatch logic.' },
+      { icon: 'Maximize', title: 'Cost-Effective', desc: 'Save up to 60% compared to a total replacement by retaining guide rails and strong mechanical parts.' }
+    ],
+    specs: [
+      { param: 'Scope of Work', value: 'Controller, Drive, Wiring, Cabin Aesthetics, Fixtures' },
+      { param: 'Retained Parts', value: 'Guide rails, counterweights, heavy structural brackets' },
+      { param: 'Energy Savings', value: 'Up to 40% reduction in power consumption' },
+      { param: 'Execution Time', value: '2 to 4 weeks per elevator' },
+      { param: 'ROI', value: 'Significantly increases property value and lowers repair costs' }
+    ],
+    applications: ['Buildings over 15 years old', 'Heritage Structures', 'Commercial Upgrades', 'Hotels'],
+  }
 };
 
 export default liftsData;

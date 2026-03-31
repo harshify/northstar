@@ -1,8 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const reasons = [
   { title: 'In-House Manufacturing', desc: 'Direct cost control and rigorous QA/QC without relying on third-party aggregators.' },
-  { title: '500+ Successful Installations', desc: 'A proven track record across demanding commercial and residential environments.' },
+  { title: '2000+ Successful Installations', desc: 'A proven track record across demanding commercial and residential environments.' },
   { title: 'Certified Safety Protocols', desc: 'Compliance with stringent Indian and International elevator safety codes.' },
   { title: '24/7 Maintenance Support Command', desc: 'Dedicated rapid-response teams utilizing predictive maintenance analytics.' }
 ];
@@ -20,7 +21,9 @@ const WhyChooseUs = () => {
             <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem', marginBottom: '2rem' }}>
               We eliminate the conventional friction in elevator procurement. By controlling the manufacturing, installation, and maintenance pipeline, we guarantee superior hardware reliability and aggressive lead times.
             </p>
-            <button className="btn btn-primary">Schedule a Consultation</button>
+            <Link to="/contact">
+              <button className="btn btn-primary">Get a Quote</button>
+            </Link>
           </div>
 
           <div style={{ flex: '1 1 500px', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '1.5rem' }}>

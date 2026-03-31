@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 
 const faqData = [
-  { question: "How much does a standard passenger lift cost?", answer: "Costs vary based on floors, capacity, and cabin finishes. A standard 4-passenger residential lift typically starts around ₹4.5 Lakhs, scaling up for commercial heavy-duty models." },
-  { question: "What is the typical installation timeline?", answer: "From site survey and manufacturing to final commissioning, a standard installation takes approximately 6 to 8 weeks." },
-  { question: "Are your lifts compliant with safety regulations?", answer: "Absolutely. All North Star elevators are manufactured to IS (Indian Standard) codes and undergo strict multi-point safety inspections before handover." },
-  { question: "What does your comprehensive Maintenance cover?", answer: "Our Maintenance covers monthly routine checkups, emergency breakdown assistance, oiling/greasing, and proactive replacement of minor wear-and-tear components." }
+  { question: "What types of lifts do you manufacture?", answer: "We manufacture a wide range of specialized lifts including passenger capacities for residential and commercial use, hospital stretcher elevators, heavy-duty industrial freight lifts, and customized dumbwaiters." },
+  { question: "What is the typical manufacturing and installation timeline?", answer: "From final site survey and design approval to manufacturing, delivery, and final commissioning, a standard installation typically takes approximately 6 to 8 weeks." },
+  { question: "Are your lifts compliant with safety regulations?", answer: "Absolutely. All North Star elevators are strictly manufactured to adhere to IS (Indian Standard) codes and undergo rigorous multi-point safety inspections before handover to ensure ultimate passenger safety." },
+  { question: "Do you offer customized elevator cabin designs?", answer: "Yes, we specialize in custom aesthetics. You can choose from a variety of premium cabin finishes, including stainless steel (hairline, mirror, or gold finish), decorative glass, bespoke lighting, and custom flooring options." },
+  { question: "What does your comprehensive maintenance contract cover?", answer: "Our comprehensive AMC (Annual Maintenance Contract) includes regular preventive maintenance visits, 24/7 emergency breakdown assistance, essential lubrication, and the proactive replacement of minor wear-and-tear components to ensure uninterrupted operation." }
 ];
 
 const FAQ = () => {
