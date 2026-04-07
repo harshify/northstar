@@ -1,4 +1,4 @@
-import passengerImg from '../assets/passenger-elevator.png';
+import passengerImg from '../assets/passenger1.jpeg';
 import homeImg      from '../assets/home-elevator.png';
 import capsuleImg   from '../assets/capsule-elevator.png';
 import freightImg   from '../assets/freight-elevator.png';

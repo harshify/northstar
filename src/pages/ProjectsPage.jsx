@@ -7,8 +7,17 @@ import projVillaImg from '../assets/proj-villa.png';
 import projMallImg from '../assets/proj-mall.png';
 import freightImg from '../assets/freight-elevator.png';
 import passengerImg from '../assets/passenger-elevator.png';
+import solitare from "../assets/solitaire.jpg"
 
 const allProjects = [
+  {
+    img: solitare,
+    location: 'Solitaire Hotel, Mussoorie',
+    type: 'Premium Passenger Lifts',
+    category: 'Hospitality',
+    year: '2024',
+    description: 'Elegant vertical mobility solutions tailored for the luxury Solitaire Hotel in Mussoorie, combining stunning design with reliable performance.'
+  },
   {
     img: projOfficeImg,
     location: 'Uttaranchal University (UIT), Dehradun',

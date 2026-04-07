@@ -147,6 +147,22 @@ const ServiceDetail = () => {
                 >
                   Get a Quote →
                 </Link>
+                <a href={lift.brochureLink || "#"}
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="btn"
+                  style={{
+                    padding: '0.875rem 2rem', fontSize: '1rem',
+                    backgroundColor: 'rgba(255,255,255,0.12)',
+                    color: '#fff', backdropFilter: 'blur(8px)',
+                    border: '1px solid rgba(255,255,255,0.2)',
+                    display: 'flex', alignItems: 'center', gap: '8px'
+                  }}
+                  onMouseEnter={e => e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.2)'}
+                  onMouseLeave={e => e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.12)'}
+                >
+                  <LucideIcons.Download size={18} /> Download Brochure
+                </a>
                 <Link to="/solutions"
                   className="btn"
                   style={{
