@@ -7,7 +7,7 @@ import projVillaImg from '../assets/proj-villa.png';
 import projMallImg from '../assets/proj-mall.png';
 import freightImg from '../assets/freight-elevator.png';
 import passengerImg from '../assets/passenger-elevator.png';
-import solitare from "../assets/solitaire.jpg"
+import solitare from "../assets/Solitaire.jpg"
 
 const allProjects = [
   {
