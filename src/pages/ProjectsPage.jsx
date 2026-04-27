@@ -1,17 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Breadcrumb from '../components/Breadcrumb';
-import projOfficeImg from '../assets/proj-office.png';
-import projHospitalImg from '../assets/proj-hospital.png';
-import projVillaImg from '../assets/proj-villa.png';
-import projMallImg from '../assets/proj-mall.png';
-import freightImg from '../assets/freight-elevator.png';
-import passengerImg from '../assets/passenger-elevator.png';
-import solitare from "../assets/Solitaire.jpg"
+import IMAGES from '../data/imageAssets';
 
 const allProjects = [
   {
-    img: solitare,
+    img: IMAGES.projSolitaire,
     location: 'Solitaire Hotel, Mussoorie',
     type: 'Premium Passenger Lifts',
     category: 'Hospitality',
@@ -19,7 +13,7 @@ const allProjects = [
     description: 'Elegant vertical mobility solutions tailored for the luxury Solitaire Hotel in Mussoorie, combining stunning design with reliable performance.'
   },
   {
-    img: projOfficeImg,
+    img: IMAGES.projUniversity,
     location: 'Uttaranchal University (UIT), Dehradun',
     type: 'High-Speed Passenger Lifts',
     category: 'Commercial',
@@ -27,7 +21,7 @@ const allProjects = [
     description: 'A major installation of 24 passenger lifts across the university campus, designed for high traffic volumes and maximum energy efficiency for students and faculty.'
   },
   {
-    img: projHospitalImg,
+    img: IMAGES.himalayanHospital,
     location: 'Himalayan Institute Hospital Trust, Jolly Grant',
     type: 'Hospital Stretcher Lifts',
     category: 'Healthcare',
@@ -35,7 +29,7 @@ const allProjects = [
     description: 'Installation of highly-reliable, wide-door stretcher lifts meeting Indian hospital safety standards, configured perfectly for rapid-response emergency access.'
   },
   {
-    img: projVillaImg,
+    img: IMAGES.projGoldenFeather,
     location: 'Deep Ganga Apartment, Sidcul, Haridwar',
     type: 'Premium Residential Passenger Lifts',
     category: 'Residential',
@@ -43,7 +37,7 @@ const allProjects = [
     description: 'A massive deployment of 60 passenger elevators across sprawling residential towers, featuring smart dispatching, premium cabin finishes, and whisper-quiet operation.'
   },
   {
-    img: freightImg,
+    img: IMAGES.projAutomat,
     location: 'Automat Irrigation, Sidcul, Haridwar',
     type: 'Heavy Goods / Industrial Lifts',
     category: 'Industrial',
@@ -51,7 +45,7 @@ const allProjects = [
     description: 'Heavy-duty freight elevator installations consisting of 8 robust units for a large manufacturing and logistics facility, featuring reinforced cabins and automated safety stops.'
   },
   {
-    img: projMallImg,
+    img: IMAGES.projDilliHaat,
     location: 'Dilli Haat Cottage Emporium, Delhi',
     type: 'Panoramic Capsule Lift',
     category: 'Commercial',
@@ -59,7 +53,7 @@ const allProjects = [
     description: 'Panoramic glass capsule lift installed as a functional and architectural centrepiece, providing visitors with scenic vertical movement through the complex.'
   },
   {
-    img: passengerImg,
+    img: IMAGES.projKKInfra,
     location: 'K. K. Infraventure, Dehradun',
     type: 'High-Speed Passenger Lifts',
     category: 'Residential',
@@ -67,7 +61,7 @@ const allProjects = [
     description: 'Installation of 20 high-speed passenger lifts forming the vertical backbone of this premium housing development, featuring smart monitoring systems.'
   },
   {
-    img: projOfficeImg,
+    img: IMAGES.projHighCourt,
     location: 'High Court Nainital, Uttarakhand',
     type: 'Machine Room Less (MRL) Lifts',
     category: 'Commercial',
@@ -75,7 +69,7 @@ const allProjects = [
     description: 'Space-saving MRL elevators installed into the prominent judicial complex, maintaining architectural integrity while significantly modernizing accessibility.'
   },
   {
-    img: projHospitalImg,
+    img: IMAGES.projShantiMukund,
     location: 'Shanti Mukund Hospital, Delhi',
     type: 'Hospital & Service Lifts',
     category: 'Healthcare',
@@ -83,7 +77,7 @@ const allProjects = [
     description: 'Combined installation of 4 hospital-grade passenger and service lifts, enabling seamless, vibration-free movement of patients and medical equipment across floors.'
   },
   {
-    img: projVillaImg,
+    img: IMAGES.projGMVN,
     location: 'GMVN SKI RESORTS, Auli, Uttarakhand',
     type: 'Boutique Hospitality Lifts',
     category: 'Hospitality',

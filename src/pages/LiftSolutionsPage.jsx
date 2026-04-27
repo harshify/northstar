@@ -1,21 +1,18 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Breadcrumb from '../components/Breadcrumb';
-import passengerImg from '../assets/passenger-elevator.png';
-import homeImg from '../assets/home-elevator.png';
-import capsuleImg from '../assets/capsule-elevator.png';
-import freightImg from '../assets/freight-elevator.png';
+import IMAGES from '../data/imageAssets';
 
 const allLifts = [
-  { title: 'Passenger Lifts', useCase: 'Commercial & Multi-story Residential', img: passengerImg },
-  { title: 'Machine Room Less (MRL) Lifts', useCase: 'Space-Saving for Modern Buildings', img: passengerImg },
-  { title: 'Home / Duplex Lifts', useCase: 'Luxury & Residential Safety', img: homeImg },
-  { title: 'Goods / Freight Lifts', useCase: 'Warehouses & Industrial Specifications', img: freightImg },
-  { title: 'Hospital / Stretcher Elevators', useCase: 'Medical Centers & Clinics', img: passengerImg },
-  { title: 'Hydraulic Lifts', useCase: 'Low Pit & Low-Rise Buildings', img: homeImg },
-  { title: 'Service Lifts', useCase: 'Restaurants, Kitchens & Commercial Services', img: freightImg },
-  { title: 'Car / Automobile Elevators', useCase: 'Automotive Dealerships & Parking', img: freightImg },
-  { title: 'Capsule Lifts', useCase: 'Malls & Architectural Highlights', img: capsuleImg },
+  { title: 'Passenger Lifts', useCase: 'Commercial & Multi-story Residential', img: IMAGES.passengerLift },
+  { title: 'Machine Room Less (MRL) Lifts', useCase: 'Space-Saving for Modern Buildings', img: IMAGES.passengerLift },
+  { title: 'Home / Duplex Lifts', useCase: 'Luxury & Residential Safety', img: IMAGES.homeElevator },
+  { title: 'Goods / Freight Lifts', useCase: 'Warehouses & Industrial Specifications', img: IMAGES.freightLift },
+  { title: 'Hospital / Stretcher Elevators', useCase: 'Medical Centers & Clinics', img: IMAGES.passengerLift },
+  { title: 'Hydraulic Lifts', useCase: 'Low Pit & Low-Rise Buildings', img: IMAGES.homeElevator },
+  { title: 'Service Lifts', useCase: 'Restaurants, Kitchens & Commercial Services', img: IMAGES.freightLift },
+  { title: 'Car / Automobile Elevators', useCase: 'Automotive Dealerships & Parking', img: IMAGES.freightLift },
+  { title: 'Capsule Lifts', useCase: 'Malls & Architectural Highlights', img: IMAGES.capsuleLift },
 ];
 
 const LiftSolutionsPage = () => {

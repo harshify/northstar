@@ -1,11 +1,4 @@
-import passengerImg from '../assets/passenger1.jpeg';
-import homeImg      from '../assets/home-elevator.png';
-import capsuleImg   from '../assets/capsule-elevator.png';
-import freightImg   from '../assets/freight-elevator.png';
-import projHospital from '../assets/proj-hospital.png';
-import projMall     from '../assets/proj-mall.png';
-import projOffice   from '../assets/proj-office.png';
-import projVilla    from '../assets/proj-villa.png';
+import IMAGES from './imageAssets';
 
 /**
  * Each lift entry uses its URL slug as the key.
@@ -16,9 +9,9 @@ const liftsData = {
   'passenger-lifts': {
     title: 'Passenger Lifts',
     videoId: 'rKp4pe92ljg',
-    gallery: [passengerImg, projOffice, projMall, projHospital],
+    gallery: [IMAGES.passengerLift, IMAGES.projOffice, IMAGES.projMall, IMAGES.projHospital],
     tagline: 'Precision mobility for every building, every occupant.',
-    heroImg: passengerImg,
+    heroImg: IMAGES.passengerLift,
     summary:
       'North Star passenger lifts are engineered for high-frequency traffic in commercial and multi-story residential buildings. Combining robust mechanics with premium cabin aesthetics, they deliver reliable, smooth, and safe vertical transportation.',
     features: [
@@ -45,9 +38,9 @@ const liftsData = {
   'machine-room-less-mrl-lifts': {
     title: 'Machine Room Less (MRL) Lifts',
     videoId: 'rKp4pe92ljg',
-    gallery: [passengerImg, projOffice, projMall],
+    gallery: [IMAGES.passengerLift, IMAGES.projOffice, IMAGES.projMall],
     tagline: 'Space-smart engineering — no machine room required.',
-    heroImg: passengerImg,
+    heroImg: IMAGES.passengerLift,
     summary:
       'MRL lifts eliminate the need for a dedicated machine room by housing the compact drive unit within the hoistway. Ideal for modern buildings where every square foot counts.',
     features: [
@@ -74,9 +67,9 @@ const liftsData = {
   'home-duplex-lifts': {
     title: 'Home / Duplex Lifts',
     videoId: 'rKp4pe92ljg',
-    gallery: [homeImg, projVilla],
+    gallery: [IMAGES.homeElevator, IMAGES.projVilla],
     tagline: 'Luxury vertical mobility crafted for private residences.',
-    heroImg: homeImg,
+    heroImg: IMAGES.homeElevator,
     summary:
       'Designed for bungalows, duplex homes, and private villas, our home lifts blend seamlessly into interior design while delivering safe and graceful movement across all floors.',
     features: [
@@ -103,9 +96,9 @@ const liftsData = {
   'goods-freight-lifts': {
     title: 'Goods / Freight Lifts',
     videoId: 'rKp4pe92ljg',
-    gallery: [freightImg, projOffice],
+    gallery: [IMAGES.freightLift, IMAGES.projOffice],
     tagline: 'Industrial-grade load handling built for heavy-duty operations.',
-    heroImg: freightImg,
+    heroImg: IMAGES.freightLift,
     summary:
       'Our freight lifts are built to withstand the rigours of warehouses, factories, and retail back-end operations. Heavy-duty structural frames, reinforced platforms, and high-load motors deliver dependable performance.',
     features: [
@@ -132,9 +125,9 @@ const liftsData = {
   'hospital-stretcher-elevators': {
     title: 'Hospital / Stretcher Elevators',
     videoId: 'rKp4pe92ljg',
-    gallery: [passengerImg, projHospital],
+    gallery: [IMAGES.passengerLift, IMAGES.projHospital],
     tagline: 'Engineered for critical care environments.',
-    heroImg: passengerImg,
+    heroImg: IMAGES.passengerLift,
     summary:
       'Designed to the highest hygiene and safety standards, our hospital lifts facilitate the smooth transfer of patients on stretchers and hospital beds, supported by infection-control finishes and priority call systems.',
     features: [
@@ -161,9 +154,9 @@ const liftsData = {
   'hydraulic-lifts': {
     title: 'Hydraulic Lifts',
     videoId: 'rKp4pe92ljg',
-    gallery: [homeImg, projVilla, projMall],
+    gallery: [IMAGES.homeElevator, IMAGES.projVilla, IMAGES.projMall],
     tagline: 'Powerful, quiet, and pit-friendly for low-rise buildings.',
-    heroImg: homeImg,
+    heroImg: IMAGES.homeElevator,
     summary:
       'Hydraulic lifts use a fluid-driven piston to raise and lower the cab, making them ideal for buildings with low headroom or pit constraints. They offer smooth, gentle rides without the need for overhead machinery.',
     features: [
@@ -190,9 +183,9 @@ const liftsData = {
   'service-lifts': {
     title: 'Service Lifts',
     videoId: 'rKp4pe92ljg',
-    gallery: [freightImg, projOffice, projHospital],
+    gallery: [IMAGES.freightLift, IMAGES.projOffice, IMAGES.projHospital],
     tagline: 'Compact and efficient goods movement within buildings.',
-    heroImg: freightImg,
+    heroImg: IMAGES.freightLift,
     summary:
       'Also known as dumbwaiters or service elevators, these compact lifts are designed to transport small goods, food, documents, and laundry between floors without occupying valuable passenger elevator space.',
     features: [
@@ -219,9 +212,9 @@ const liftsData = {
   'car-automobile-elevators': {
     title: 'Car / Automobile Elevators',
     videoId: 'rKp4pe92ljg',
-    gallery: [freightImg, projMall, projOffice],
+    gallery: [IMAGES.freightLift, IMAGES.projMall, IMAGES.projOffice],
     tagline: 'Engineered for seamless vehicle mobility across levels.',
-    heroImg: freightImg,
+    heroImg: IMAGES.freightLift,
     summary:
       'North Star car lifts enable vehicles to move between basement, ground, and upper parking levels with maximum safety and efficiency. Heavy-duty platforms and wide-opening doors accommodate all standard car sizes.',
     features: [
@@ -248,9 +241,9 @@ const liftsData = {
   'capsule-lifts': {
     title: 'Capsule Lifts',
     videoId: 'rKp4pe92ljg',
-    gallery: [capsuleImg, projMall, projOffice],
+    gallery: [IMAGES.capsuleLift, IMAGES.projMall, IMAGES.projOffice],
     tagline: 'Architectural glass lifts that make vertical movement a visual experience.',
-    heroImg: capsuleImg,
+    heroImg: IMAGES.capsuleLift,
     summary:
       'Capsule lifts are panoramic glass elevators that serve as a statement architectural feature. Designed for malls, hotels, and landmark buildings, they combine engineering precision with stunning visual impact.',
     features: [
@@ -277,9 +270,9 @@ const liftsData = {
   'installation': {
     title: 'New Installations',
     videoId: 'rKp4pe92ljg',
-    gallery: [projOffice, projMall, projHospital, projVilla],
+    gallery: [IMAGES.projOffice, IMAGES.projMall, IMAGES.projHospital, IMAGES.projVilla],
     tagline: 'Precision engineering from blueprint to handover.',
-    heroImg: passengerImg,
+    heroImg: IMAGES.passengerLift,
     summary: 'Our installation process is defined by strict adherence to safety codes, exact mechanical alignment, and seamless project management to deliver elevators that operate flawlessly for decades.',
     features: [
       { icon: 'Ruler', title: 'Site Assessment', desc: 'Detailed shaft measurement and civil work verification before manufacturing begins.' },
@@ -302,9 +295,9 @@ const liftsData = {
   'maintenance': {
     title: 'Comprehensive Maintenance',
     videoId: 'rKp4pe92ljg',
-    gallery: [projOffice, projMall],
+    gallery: [IMAGES.projOffice, IMAGES.projMall],
     tagline: 'Proactive care to guarantee zero-downtime performance.',
-    heroImg: passengerImg,
+    heroImg: IMAGES.passengerLift,
     summary: 'Our Annual Maintenance Contracts (AMC) go beyond mere troubleshooting. We focus on preventive care, regular lubrication, and proactive parts replacement to maximize your elevator\'s lifespan.',
     features: [
       { icon: 'Tool', title: 'Preventive Care', desc: 'Monthly scheduled visits to inspect, clean, and lubricate mechanical and electrical components.' },
@@ -327,9 +320,9 @@ const liftsData = {
   'repair-overhaul': {
     title: 'Repair & Overhaul',
     videoId: 'rKp4pe92ljg',
-    gallery: [freightImg, projHospital],
+    gallery: [IMAGES.freightLift, IMAGES.projHospital],
     tagline: 'Rapid diagnostics and restorative engineering.',
-    heroImg: freightImg,
+    heroImg: IMAGES.freightLift,
     summary: 'When critical components fail or performance degrades, our overhaul team steps in. We expertly diagnose complex electro-mechanical issues and execute major repairs with minimal operational disruption.',
     features: [
       { icon: 'Activity', title: 'Deep Diagnostics', desc: 'Advanced vibration and electrical analysis to identify the root cause of systemic issues.' },
@@ -352,9 +345,9 @@ const liftsData = {
   'modernization': {
     title: 'System Modernization',
     videoId: 'rKp4pe92ljg',
-    gallery: [capsuleImg, passengerImg, projOffice],
+    gallery: [IMAGES.capsuleLift, IMAGES.passengerLift, IMAGES.projOffice],
     tagline: 'Breathe new life into aging vertical transport systems.',
-    heroImg: capsuleImg,
+    heroImg: IMAGES.capsuleLift,
     summary: 'Elevator modernization provides the benefits of a brand-new lift at a fraction of the cost. Upgrade your outdated relay logic controllers, aging aesthetics, and inefficient motors while retaining the existing structural framework.',
     features: [
       { icon: 'Cpu', title: 'Controller Upgrades', desc: 'Replace obsolete relay panels with smart, energy-efficient microprocessor controllers.' },

@@ -94,8 +94,8 @@ const Navbar = () => {
       zIndex: 1000,
       transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
       padding: '1rem 0',
-      backgroundColor: scrolled || isMobileMenuOpen ? 'var(--bg-secondary)' : 'var(--bg-primary)',
-      borderBottom: scrolled || isMobileMenuOpen ? '1px solid rgba(0, 0, 0, 0.05)' : 'none'
+      backgroundColor: isMobileMenuOpen ? 'var(--bg-secondary)' : (scrolled ? 'transparent' : 'var(--bg-primary)'),
+      borderBottom: isMobileMenuOpen ? '1px solid rgba(0, 0, 0, 0.05)' : (scrolled ? 'none' : 'none'), // Handled by .glass
     }}>
       <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', position: 'relative' }}>
         
@@ -125,10 +125,16 @@ const Navbar = () => {
             <Link to="/" className={`nav-link ${location.pathname === '/' ? 'active' : ''}`} onClick={closeMobileMenu}>
               <span className="nav-square"></span> Home
             </Link>
-            <Link to="/about" className={`nav-link ${location.pathname.startsWith('/about') ? 'active' : ''}`} onClick={closeMobileMenu}>
-              <span className="nav-square"></span> About
-            </Link>
-            <NavDropdown
+            <NavDropdown 
+              title="About" 
+              basePath="/about" 
+              items={[
+                { label: 'Our Story', to: '/about' },
+                { label: "Director's Note", to: '/about/directors-note' }
+              ]} 
+              closeMobileMenu={closeMobileMenu} 
+            />
+            <NavDropdown 
               title="Lift Solutions"
               basePath="/solutions"
               items={[
@@ -146,7 +152,18 @@ const Navbar = () => {
               ]}
               closeMobileMenu={closeMobileMenu}
             />
-            <NavDropdown title="Services" basePath="/services" items={['Lift Installation', 'Maintenance', 'Lift Repair', 'Modernization / Upgrade']} closeMobileMenu={closeMobileMenu} />
+            <NavDropdown 
+              title="Services" 
+              basePath="/services" 
+              items={[
+                'Lift Installation', 
+                { label: 'Maintenance Department', to: '/services/maintenance-department', highlight: true },
+                'Maintenance', 
+                'Lift Repair', 
+                'Modernization / Upgrade'
+              ]} 
+              closeMobileMenu={closeMobileMenu} 
+            />
             <Link to="/projects" className={`nav-link ${location.pathname.startsWith('/projects') ? 'active' : ''}`} onClick={closeMobileMenu}>
               <span className="nav-square"></span> Projects
             </Link>

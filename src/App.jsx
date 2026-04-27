@@ -18,6 +18,9 @@ import ServiceAreasPage from './pages/ServiceAreasPage';
 import BlogGuidesPage from './pages/BlogGuidesPage';
 import BlogPostPage from './pages/BlogPostPage';
 
+import DirectorsNote from './pages/DirectorsNote';
+import MaintenanceDepartment from './pages/MaintenanceDepartment';
+
 function App() {
   return (
     <Router>
@@ -27,9 +30,11 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/about/directors-note" element={<DirectorsNote />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/solutions" element={<LiftSolutionsPage />} />
           <Route path="/solutions/:id" element={<ServiceDetail />} />
+          <Route path="/services/maintenance-department" element={<MaintenanceDepartment />} />
           <Route path="/services/:id" element={<ServiceDetail />} />
           <Route path="/projects" element={<ProjectsPage />} />
           <Route path="/clients" element={<ClientsPage />} />

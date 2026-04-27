@@ -27,7 +27,7 @@ const blogPosts = [
 
 const BlogPreview = () => {
   return (
-    <section id="blog-guides" className="section-padding" style={{ backgroundColor: 'var(--bg-primary)' }}>
+    <section id="blog-guides" className="section-padding" style={{ backgroundColor: 'var(--bg-primary)', paddingTop: '2rem' }}>
       <div className="container">
         
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '3rem', flexWrap: 'wrap', gap: '1rem' }}>

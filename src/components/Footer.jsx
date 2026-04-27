@@ -22,7 +22,7 @@ const Footer = () => {
           <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
             <Link to="/contact" className="btn btn-primary">Get a Quote</Link>
             <a
-              href="tel:+918979466131"
+              href="tel:+917900265555"
               className="btn"
               style={{
                 backgroundColor: 'var(--text-primary)',
@@ -33,7 +33,7 @@ const Footer = () => {
               onMouseEnter={e => { e.currentTarget.style.backgroundColor = 'var(--accent-secondary)'; e.currentTarget.style.transform = 'translateY(-2px)'; }}
               onMouseLeave={e => { e.currentTarget.style.backgroundColor = 'var(--text-primary)'; e.currentTarget.style.transform = 'translateY(0)'; }}
             >
-              📞 Call +91 89794 66131
+              📞 Call +91 79002 65555
             </a>
           </div>
         </div>
@@ -75,6 +75,8 @@ const Footer = () => {
             <h4 style={{ marginBottom: '1.5rem', color: 'var(--text-primary)', fontFamily: 'Space Grotesk' }}>Company</h4>
             <ul style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
               <li><Link to="/about" style={{ color: 'var(--text-secondary)', textDecoration: 'none' }} className="footer-link">About Us</Link></li>
+              <li><Link to="/about/directors-note" style={{ color: 'var(--text-secondary)', textDecoration: 'none' }} className="footer-link">Director's Note</Link></li>
+              <li><Link to="/services/maintenance-department" style={{ color: 'var(--text-secondary)', textDecoration: 'none' }} className="footer-link">Maintenance Dept.</Link></li>
               <li><Link to="/projects" style={{ color: 'var(--text-secondary)', textDecoration: 'none' }} className="footer-link">Our Projects</Link></li>
               <li><Link to="/clients" style={{ color: 'var(--text-secondary)', textDecoration: 'none' }} className="footer-link">Our Clients</Link></li>
               <li><Link to="/resources/service-areas" style={{ color: 'var(--text-secondary)', textDecoration: 'none' }} className="footer-link">Service Areas</Link></li>

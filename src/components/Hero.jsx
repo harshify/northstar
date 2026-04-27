@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import heroVideo from '../assets/3623-172488375.mp4';
+import IMAGES from '../data/imageAssets';
 
 const Hero = () => {
   return (
@@ -20,7 +20,7 @@ const Hero = () => {
         loop
         muted
         playsInline
-        src={heroVideo}
+        src={IMAGES.heroVideo}
         style={{
           position: 'absolute',
           top: 0,
@@ -99,55 +99,6 @@ const Hero = () => {
           
         </div>
       </div>
-      
-      {/* Scroll Down Indicator */}
-      <div 
-        onClick={() => document.getElementById('about-us')?.scrollIntoView({ behavior: 'smooth' })}
-        style={{
-          position: 'absolute',
-          bottom: '2.5rem',
-          left: '50%',
-          transform: 'translateX(-50%)',
-          zIndex: 10,
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          gap: '0.8rem',
-          cursor: 'pointer',
-          opacity: 0.8,
-          transition: 'opacity 0.3s ease'
-        }}
-        onMouseEnter={e => e.currentTarget.style.opacity = '1'}
-        onMouseLeave={e => e.currentTarget.style.opacity = '0.8'}
-      >
-        <span style={{ 
-          color: 'var(--text-secondary)', 
-          fontSize: '0.75rem', 
-          textTransform: 'uppercase', 
-          letterSpacing: '2px', 
-          fontWeight: 700 
-        }}>
-          Scroll to know more
-        </span>
-        <div style={{
-          width: '24px',
-          height: '40px',
-          border: '2px solid var(--text-secondary)',
-          borderRadius: '20px',
-          display: 'flex',
-          justifyContent: 'center',
-          paddingTop: '6px'
-        }}>
-          <div className="scroll-wheel" style={{
-            width: '4px',
-            height: '8px',
-            backgroundColor: 'var(--accent-secondary)',
-            borderRadius: '2px',
-            animation: 'scrollBouncing 2s infinite ease-in-out'
-          }}></div>
-        </div>
-      </div>
-
     </section>
   );
 };

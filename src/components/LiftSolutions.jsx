@@ -5,21 +5,17 @@ import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import passengerImg from '../assets/passenger-elevator.png';
-import homeImg from '../assets/home-elevator.png';
-import capsuleImg from '../assets/capsule-elevator.png';
-import freightImg from '../assets/freight-elevator.png';
+import IMAGES from '../data/imageAssets';
 
 const liftTypes = [
-  { title: 'Passenger Lifts', useCase: 'Commercial & Multi-story Residential', img: passengerImg },
-  { title: 'Machine Room Less (MRL) Lifts', useCase: 'Space-Saving for Modern Buildings', img: passengerImg },
-  { title: 'Home / Duplex Lifts', useCase: 'Luxury & Residential Safety', img: homeImg },
-  { title: 'Goods / Freight Lifts', useCase: 'Warehouses & Industrial Specifications', img: freightImg },
-  { title: 'Hospital / Stretcher Elevators', useCase: 'Medical Centers & Clinics', img: passengerImg },
-  { title: 'Hydraulic Lifts', useCase: 'Low Pit & Low-Rise Buildings', img: homeImg },
-  { title: 'Service Lifts', useCase: 'Restaurants, Kitchens & Commercial Services', img: freightImg },
-  { title: 'Car / Automobile Elevators', useCase: 'Automotive Dealerships & Parking', img: freightImg },
-  { title: 'Capsule Lifts', useCase: 'Malls & Architectural Highlights', img: capsuleImg },
+  { title: 'Passenger Lifts', useCase: 'Commercial & Multi-story Residential', img: IMAGES.passengerLift },
+  { title: 'Machine Room Less (MRL) Lifts', useCase: 'Space-Saving for Modern Buildings', img: IMAGES.mrlReal },
+  { title: 'Home / Duplex Lifts', useCase: 'Luxury & Residential Safety', img: IMAGES.homeReal },
+  { title: 'Goods / Freight Lifts', useCase: 'Warehouses & Industrial Specifications', img: IMAGES.goodsReal },
+  { title: 'Hospital / Stretcher Elevators', useCase: 'Medical Centers & Clinics', img: IMAGES.hospitalReal },
+  { title: 'Hydraulic Lifts', useCase: 'Low Pit & Low-Rise Buildings', img: IMAGES.hydraulicReal },
+  { title: 'Car / Automobile Elevators', useCase: 'Automotive Dealerships & Parking', img: IMAGES.carReal },
+  { title: 'Capsule Lifts', useCase: 'Malls & Architectural Highlights', img: IMAGES.capsuleReal },
 ];
 
 const LiftSolutions = () => {

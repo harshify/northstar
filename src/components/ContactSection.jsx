@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import emailjs from '@emailjs/browser';
 
 /* ── Validation helpers ─────────────────────────────────── */
 const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -84,25 +85,39 @@ const ContactSection = () => {
     if (Object.keys(errors).length > 0) return;
 
     setStatus('sending');
+    
+    // Prepare template parameters (mapping to your dashboard template)
+    const templateParams = {
+      user_name: `${fields.firstName} ${fields.lastName}`,
+      user_email: fields.email,
+      user_phone: fields.phone,
+      project_type: fields.projectType,
+      stops: fields.stops || 'Not specified',
+      budget: fields.budget || 'Not specified',
+      message: fields.message || 'No additional message provided.',
+      date: new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' }) + ' IST'
+    };
+
     try {
-      const res = await fetch('http://localhost:3001/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(fields),
-      });
-      const data = await res.json();
-      if (data.success) {
+      // Credentials from environment variables (.env) for security
+      const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+      const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+      const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+      const res = await emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams, PUBLIC_KEY);
+
+      if (res.status === 200) {
         setStatus('success');
-        setServerMsg(data.message);
+        setServerMsg('Thank you! Your enquiry has been sent successfully. Our team will contact you shortly.');
         setFields({ firstName: '', lastName: '', email: '', phone: '', projectType: '', stops: '', budget: '', message: '' });
         setTouched({});
       } else {
-        setStatus('error');
-        setServerMsg(data.message);
+        throw new Error('EmailJS submission failed');
       }
-    } catch {
+    } catch (err) {
+      console.error('Email Error:', err);
       setStatus('error');
-      setServerMsg('Could not reach the server. Please call us directly or try again later.');
+      setServerMsg('Submission failed. Please call us directly or check your EmailJS credentials.');
     }
   };
 
@@ -247,9 +262,9 @@ const ContactSection = () => {
               <div>
                 <h4 style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '0.5rem' }}>Direct Lines</h4>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '0.4rem' }}>
-                  <a href="tel:+918979466131" style={{ fontSize: '1.4rem', color: 'var(--text-primary)', fontWeight: 700, fontFamily: 'Space Grotesk', textDecoration: 'none' }}>+91 89794 66131</a>
-                  <a href="tel:+919897139260" style={{ fontSize: '1.4rem', color: 'var(--text-primary)', fontWeight: 700, fontFamily: 'Space Grotesk', textDecoration: 'none' }}>+91 98971 39260</a>
                   <a href="tel:+917900265555" style={{ fontSize: '1.4rem', color: 'var(--text-primary)', fontWeight: 700, fontFamily: 'Space Grotesk', textDecoration: 'none' }}>+91 79002 65555</a>
+                  <a href="tel:+919897139260" style={{ fontSize: '1.4rem', color: 'var(--text-primary)', fontWeight: 700, fontFamily: 'Space Grotesk', textDecoration: 'none' }}>+91 98971 39260</a>
+                  <a href="tel:+918979466131" style={{ fontSize: '1.4rem', color: 'var(--text-primary)', fontWeight: 700, fontFamily: 'Space Grotesk', textDecoration: 'none' }}>+91 89794 66131</a>
                   <a href="tel:+919412005777" style={{ fontSize: '1.4rem', color: 'var(--text-primary)', fontWeight: 700, fontFamily: 'Space Grotesk', textDecoration: 'none' }}>+91 94120 05777</a>
                   <a href="tel:+919359903586" style={{ fontSize: '1.4rem', color: 'var(--text-primary)', fontWeight: 700, fontFamily: 'Space Grotesk', textDecoration: 'none' }}>+91 93599 03586</a>
                 </div>

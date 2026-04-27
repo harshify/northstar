@@ -1,7 +1,27 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect, useRef } from 'react';
+import { motion, useInView, animate } from 'framer-motion';
+import IMAGES from '../data/imageAssets';
 
 const AboutOverview = () => {
+  const highlights = [
+    { 
+      title: 'Precision Engineering',
+      desc: 'Complete control over material quality and precision engineering from our dedicated in-house plant.' 
+    },
+    { 
+      title: 'Proven Track Record',
+      desc: 'Successfully serving commercial, industrial, and residential segments across the country.' 
+    },
+    { 
+      title: 'Unrivaled Expertise',
+      desc: 'Two decades of delivering excellence and innovative vertical transportation solutions.' 
+    },
+    { 
+      title: 'Round-the-Clock Care',
+      desc: 'Zero downtime guarantee with our proactive Annual Maintenance Contracts and rapid response.' 
+    }
+  ];
+
   return (
     <section id="about-us" className="section-padding" style={{ backgroundColor: 'var(--bg-primary)' }}>
       <div className="container">
@@ -19,44 +39,35 @@ const AboutOverview = () => {
             Building the Backbone of Vertical Mobility Since 2006.
           </h2>
           <p style={{ fontSize: '1.15rem', color: 'var(--text-secondary)', maxWidth: '700px', lineHeight: 1.7 }}>
-            North Star Lifts stands at the forefront of elevator engineering. We design, manufacture, and install premium vertical transportation systems perfectly tailored to industrial, commercial, and residential architectures.
+            North Star Lifts stands at the forefront of elevator engineering, designing premium transportation systems tailored to the most ambitious architectural projects.
           </p>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '3rem', alignItems: 'center' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '4rem', alignItems: 'center' }}>
           
-          <div style={{ order: 1 }}>
+          <div style={{ position: 'relative' }}>
             <img 
-              src="https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+              src={IMAGES.aboutOverview} 
               alt="North Star Engineering Team" 
-              style={{ width: '100%', height: '500px', objectFit: 'cover', borderRadius: '8px' }}
+              style={{ width: '100%', height: 'auto', minHeight: '550px', objectFit: 'cover', borderRadius: '12px', boxShadow: '0 20px 40px rgba(0,0,0,0.1)' }}
             />
           </div>
           
-          <div style={{ order: 2 }}>
-            <h3 style={{ fontSize: '2rem', marginBottom: '1.5rem', color: 'var(--text-primary)' }}>Why Choose North Star?</h3>
+          <div>
+            <h3 style={{ fontSize: '5.5rem', color: 'var(--text-primary)', lineHeight: 1.1, marginBottom: '2rem' }}>
+              Why Choose <span style={{ color: 'var(--accent-secondary)' }}>North Star?</span>
+            </h3>
             
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-              <div>
-                <h4 style={{ fontSize: '1.2rem', color: 'var(--accent-secondary)', marginBottom: '0.5rem' }}>In-House Manufacturing</h4>
-                <p style={{ color: 'var(--text-secondary)' }}>Complete control over material quality and precision engineering from our dedicated 50,000 sq.ft facility.</p>
-              </div>
-              
-              <div>
-                <h4 style={{ fontSize: '1.2rem', color: 'var(--accent-secondary)', marginBottom: '0.5rem' }}>Certified Installers</h4>
-                <p style={{ color: 'var(--text-secondary)' }}>Our field teams undergo rigorous safety protocols to ensure flawless commissioning on every project.</p>
-              </div>
-              
-              <div>
-                <h4 style={{ fontSize: '1.2rem', color: 'var(--accent-secondary)', marginBottom: '0.5rem' }}>24/7 Maintenance Support</h4>
-                <p style={{ color: 'var(--text-secondary)' }}>Zero downtime guarantee with our proactive Annual Maintenance Contracts and rapid response fleet.</p>
-              </div>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '2rem' }}>
+              {highlights.map((item, index) => (
+                <div key={index} style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+                  <h4 style={{ fontSize: '1.15rem', color: 'var(--text-primary)', fontWeight: 700, borderLeft: '3px solid var(--accent-secondary)', paddingLeft: '12px' }}>
+                    {item.title}
+                  </h4>
+                  <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', lineHeight: 1.6 }}>{item.desc}</p>
+                </div>
+              ))}
             </div>
-            
-            <Link to="/contact" className="btn-split" style={{ marginTop: '2.5rem' }}>
-              <span className="text">Verify Our Certifications</span>
-              <span className="icon">→</span>
-            </Link>
           </div>
 
         </div>

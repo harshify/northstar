@@ -1,9 +1,9 @@
 import React from 'react';
 
+import IMAGES from './imageAssets';
+
 // Example imagery if we needed real ones, here we can refer to some generic placeholders or use existing assets.
-import homeImg from '../assets/home-elevator.png';
-import passengerImg from '../assets/passenger-elevator.png';
-import freightImg from '../assets/freight-elevator.png';
+// Removed local imports for homeImg and freightImg as they are now in IMAGES.
 
 const blogsData = [
   {
@@ -14,7 +14,7 @@ const blogsData = [
     readTime: '6 min read',
     category: 'Home Elevators',
     excerpt: 'Upgrading your residence? Learn the key differences between Hydraulic, Traction, and MRL home elevators, and which makes the most sense for Indian villas and duplexes.',
-    image: homeImg,
+    image: IMAGES.homeElevator,
     content: `
 ## Why Install a Home Lift in Your Indian Residence?
 
@@ -57,7 +57,7 @@ Investing in a home elevator increases your property’s valuation and future-pr
     readTime: '8 min read',
     category: 'Commercial Solutions',
     excerpt: 'Machine Room-Less (MRL) technology has revolutionized mid-rise construction. Read our deep dive into why developers are abandoning traditional penthouse machine rooms.',
-    image: passengerImg,
+    image: IMAGES.passengerLift,
     content: `
 ## The Evolution of the Commercial Elevator
 
@@ -94,7 +94,7 @@ While MRL is the standard for mid-rise commercial buildings, ultra-high-rise sky
     readTime: '5 min read',
     category: 'Maintenance',
     excerpt: 'Hospital and stretcher elevators run 24/7. Discover the critical maintenance routines that prevent breakdowns in intense healthcare environments.',
-    image: freightImg,
+    image: IMAGES.freightLift,
     content: `
 ## The High Stakes of Healthcare Mobility
 

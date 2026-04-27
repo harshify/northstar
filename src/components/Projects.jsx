@@ -1,19 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import projOfficeImg from '../assets/proj-office.png';
-import projHospitalImg from '../assets/proj-hospital.png';
-import projVillaImg from '../assets/proj-villa.png';
-import projMallImg from '../assets/proj-mall.png';
-import freightImg from '../assets/freight-elevator.png';
-import passengerImg from '../assets/passenger-elevator.png';
+import IMAGES from '../data/imageAssets';
 
 const projectsList = [
-  { img: projOfficeImg,   category: 'Commercial',  location: 'Uttaranchal University (UIT), Dehradun',              type: 'High-Speed Passenger Lifts' },
-  { img: projHospitalImg, category: 'Healthcare',   location: 'Himalayan Institute Hospital Trust, Jolly Grant', type: 'Hospital Stretcher Lifts' },
-  { img: projVillaImg,    category: 'Residential',  location: 'Deep Ganga Apartment, Sidcul, Haridwar',            type: 'Premium Residential Passenger Lifts' },
-  { img: freightImg,      category: 'Industrial',   location: 'Automat Irrigation, Sidcul, Haridwar',          type: 'Heavy Goods / Industrial Lifts' },
-  { img: projMallImg,     category: 'Commercial',   location: 'Dilli Haat Cottage Emporium, Delhi',               type: 'Panoramic Capsule Lift' },
-  { img: passengerImg,    category: 'Residential',  location: 'K. K. Infraventure, Dehradun',           type: 'High-Speed Passenger Lifts' },
+  { img: IMAGES.projSolitaire,    category: 'Hospitality', location: 'Solitaire Mussoorie, U.K.',            type: 'Premium Panoramic Lifts' },
+  { img: IMAGES.projUniversity,   category: 'Commercial',  location: 'Uttaranchal University (UIT), Dehradun', type: 'High-Speed Passenger Lifts' },
+  { img: IMAGES.projGoldenFeather,category: 'Residential', location: 'Deep Ganga Apartment, Sidcul, Haridwar',    type: 'Premium Residential Lifts' },
+  { img: IMAGES.hospitalReal,     category: 'Healthcare',  location: 'Himalayan Institute Hospital Trust',    type: 'Hospital Stretcher Lifts' },
+  { img: IMAGES.projHighCourt,   category: 'Commercial', location: 'Uttarakhand High Court, Nainital',          type: 'Machine Room Less (MRL) Lifts' },
+  { img: IMAGES.projKKInfra,      category: 'Commercial', location: 'College of Engineering Roorkie (COER), Roorkee',           type: 'Commercial' },
 ];
 
 const Projects = () => {

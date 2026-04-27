@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import * as LucideIcons from 'lucide-react';
 import Breadcrumb from '../components/Breadcrumb';
 import liftsData   from '../data/liftsData';
-import heroImg     from '../assets/lift-hero-bg.png';
+import IMAGES from '../data/imageAssets';
 
 /* ── Helpers ────────────────────────────────────────────── */
 const TABS = ['Features', 'Technical Specs', 'Applications', 'Gallery'];
@@ -102,7 +102,7 @@ const ServiceDetail = () => {
       }}>
         {/* Background image */}
         <img
-          src={heroImg}
+          src={IMAGES.liftHeroBg}
           alt={lift.title}
           style={{
             position: 'absolute', inset: 0,
